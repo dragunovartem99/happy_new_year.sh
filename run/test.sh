@@ -5,13 +5,13 @@ source functions/print_red_text.sh
 source functions/print_green_text.sh
 
 for dir in tests/*/; do
-	SOURCES=(
+	sources=(
 		"${dir}mock.sh"
 		"functions/update_copyright.sh"
 		"pieces/main_program.sh"
 	)
 
-	compose ${SOURCES[@]} | bash
+	compose ${sources[@]} | bash
 
 	actual_diff=$(git diff $dir)
 	expected_diff=$(cat "${dir}expected.diff")
