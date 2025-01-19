@@ -33,7 +33,7 @@ EOF
 echo "Copyright years updated to $TODAY"
 }
 
-## Program Execution
+# Program Execution
 
 find "${TARGETS[@]}" -type f | while read -r file; do
 	update_copyright_year "$file"
