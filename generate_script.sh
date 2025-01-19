@@ -1,6 +1,6 @@
 #!/bin/bash
 
-build_script() {
+generate_script() {
 	local config="$1"
 
 	BUILDING_BLOCKS=(
