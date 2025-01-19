@@ -2,4 +2,6 @@
 
 source generate_script.sh
 
-generate_script "./playground/01-works-on-single-file/fake.sh" | bash
+for dir in ./playground/*/; do
+	generate_script "${dir}configuration.test.sh" | bash
+done
