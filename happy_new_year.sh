@@ -2,15 +2,22 @@
 
 # Configuration Interface
 
-COPYRIGHT_PATTERN="Copyright (\c\) 1999-****"
-MASK_SYMBOL="*"
+TODAY=$(date +"%Y")
+REGEX="[0-9]{4}"
 
-CURRENT_YEAR=$(date +"%Y") # set manually if your system has invalid date
+OLD_COPYRIGHT="Copyright \(c\) 1999-$REGEX"
+NEW_COPYRIGHT="Copyright \(c\) 1999-$TODAY"
 
 TARGETS=(
 	"."
 )
 
+# Implementation
+
+update_copyright_year() {
+	local file=$1
+	sed -i -E "s/$OLD_COPYRIGHT/$NEW_COPYRIGHT/g" "$file"
+}
 
 print_success_message() {
 cat << "EOF"
@@ -23,6 +30,13 @@ cat << "EOF"
       /    \   /    \          *   |       |  )),`   (   .  )     *
    *   `||` ..  `||`   . *.   ... ==========='`   ... '--`-` ... *    .
 EOF
+echo "Copyright years updated to $TODAY"
 }
+
+## Program Execution
+
+find "${TARGETS[@]}" -type f | while read -r file; do
+	update_copyright_year "$file"
+done
 
 print_success_message
