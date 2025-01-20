@@ -23,14 +23,13 @@ on_test_passed() {
 }
 
 for dir in tests/*/; do
-	compose "${dir}configuration.test.sh" | bash
+	compose "${dir}mock.sh" | bash
 
 	actual_diff=$(git diff $dir)
 	expected_diff=$(cat "${dir}expected.diff")
 
 	if [ "$actual_diff" == "$expected_diff" ]; then
 		on_test_passed $dir
-		git checkout $dir --quiet
 	else
 		on_test_failed $dir
 		echo "Expected Diff:"
