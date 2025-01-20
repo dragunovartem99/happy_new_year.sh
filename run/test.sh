@@ -11,7 +11,8 @@ for dir in tests/*/; do
 		"pieces/main_program.sh"
 	)
 
-	compose ${sources[@]} | bash
+	test_script=$(compose ${sources[@]})
+	(cd "$dir" && bash <<< "$test_script")
 
 	actual_diff=$(git diff $dir)
 	expected_diff=$(cat "${dir}expected.diff")

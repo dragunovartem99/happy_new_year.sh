@@ -7,5 +7,5 @@ OLD_COPYRIGHT="Copyright 2005-$REGEX"
 NEW_COPYRIGHT="Copyright 2005-$TODAY"
 
 TARGETS=(
-	"tests/01-simplest-case/code.go"
+	"code.go"
 )

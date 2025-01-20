@@ -7,5 +7,5 @@ OLD_COPYRIGHT="Copyright \(c\) 2003-$REGEX OpenAI, Inc."
 NEW_COPYRIGHT="Copyright \(c\) 2003-$TODAY OpenAI, Inc."
 
 TARGETS=(
-	"tests/03-copyright-symbol/code.py"
+	"code.py"
 )
