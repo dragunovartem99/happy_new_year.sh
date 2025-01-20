@@ -27,10 +27,10 @@ for dir in tests/*/; do
 
 	actual_diff=$(git diff $dir)
 	expected_diff=$(cat "${dir}expected.diff")
-	git checkout $dir --quiet
 
 	if [ "$actual_diff" == "$expected_diff" ]; then
 		on_test_passed $dir
+		git checkout $dir --quiet
 	else
 		on_test_failed $dir
 		echo "Expected Diff:"
