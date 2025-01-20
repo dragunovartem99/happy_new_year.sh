@@ -1,4 +1,4 @@
-// Copyright (2022-2025) OpenAI. All rights reserved.
+// Copyright (2022-2024) OpenAI. All rights reserved.
 
 (function() {
 	// AI-generated code starts here
