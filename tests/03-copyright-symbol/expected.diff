@@ -1,7 +1,7 @@
-diff --git a/tests/02-works-with-specified-owner/code.py b/tests/02-works-with-specified-owner/code.py
+diff --git a/tests/03-copyright-symbol/code.py b/tests/03-copyright-symbol/code.py
 index 65415ac..fc2684a 100644
---- a/tests/02-works-with-specified-owner/code.py
-+++ b/tests/02-works-with-specified-owner/code.py
+--- a/tests/03-copyright-symbol/code.py
++++ b/tests/03-copyright-symbol/code.py
 @@ -1,4 +1,4 @@
 -# Copyright (c) 2003-2021 OpenAI, Inc.
 +# Copyright (c) 2003-2019 OpenAI, Inc.
