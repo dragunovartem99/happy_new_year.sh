@@ -1,5 +1,3 @@
-# Configuration
-
 TODAY="2025"
 REGEX="[0-9]{4}"
 

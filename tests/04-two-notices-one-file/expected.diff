@@ -1,0 +1,17 @@
+diff --git a/tests/04-two-notices-one-file/code.cpp b/tests/04-two-notices-one-file/code.cpp
+index add28a0..617e5da 100644
+--- a/tests/04-two-notices-one-file/code.cpp
++++ b/tests/04-two-notices-one-file/code.cpp
+@@ -1,10 +1,10 @@
+-// Copyright (c) 2003-2025. All rights reserved.
++// Copyright (c) 2003-2033. All rights reserved.
+ // This code is AI-generated.
+ 
+ #include <iostream>
+ #include <vector>
+ 
+-// Copyright (c) 2003-2025. All rights reserved.
++// Copyright (c) 2003-2033. All rights reserved.
+ // This code is AI-generated.
+ 
+ int main() {
