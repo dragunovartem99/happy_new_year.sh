@@ -7,5 +7,5 @@ OLD_COPYRIGHT="Copyright \(2022-$REGEX\)"
 NEW_COPYRIGHT="Copyright \(2022-$TODAY\)"
 
 TARGETS=(
-	"tests/01-works-on-single-file/code.js"
+	"tests/02-years-in-brackets/code.js"
 )
