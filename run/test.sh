@@ -12,7 +12,7 @@ for dir in tests/*/; do
 	)
 
 	test_script=$(compose ${sources[@]})
-	(cd "$dir" && bash <<< "$test_script")
+	(cd $dir && bash <<< $test_script)
 
 	actual_diff=$(git diff $dir)
 	expected_diff=$(cat "${dir}expected.diff")
