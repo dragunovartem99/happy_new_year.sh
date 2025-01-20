@@ -1,0 +1,11 @@
+diff --git a/tests/01-works-on-single-file/code.js b/tests/01-works-on-single-file/code.js
+index a492f16..bdf0c4d 100644
+--- a/tests/01-works-on-single-file/code.js
++++ b/tests/01-works-on-single-file/code.js
+@@ -1,5 +1,5 @@
+ /*!
+- * Copyright (c) 1999-2012 Your Company Name. All rights reserved.
++ * Copyright (c) 1999-2025 Your Company Name. All rights reserved.
+  * This function is part of an AI system.
+  */
+ 

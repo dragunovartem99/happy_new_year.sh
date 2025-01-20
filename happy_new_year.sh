@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Configuration Interface
+# Configuration
 
 TODAY=$(date +"%Y")
 REGEX="[0-9]{4}"
