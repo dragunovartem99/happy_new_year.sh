@@ -1,0 +1,10 @@
+diff --git a/tests/02-works-with-specified-owner/code.py b/tests/02-works-with-specified-owner/code.py
+index 65415ac..fc2684a 100644
+--- a/tests/02-works-with-specified-owner/code.py
++++ b/tests/02-works-with-specified-owner/code.py
+@@ -1,4 +1,4 @@
+-# Copyright (c) 2003-2021 OpenAI, Inc.
++# Copyright (c) 2003-2019 OpenAI, Inc.
+ # This code was AI-generated and may be used and modified freely.
+ 
+ import random
