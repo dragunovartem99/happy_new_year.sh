@@ -30,6 +30,7 @@ for dir in tests/*/; do
 
 	if [ "$actual_diff" == "$expected_diff" ]; then
 		on_test_passed $dir
+		git checkout $dir --quiet
 	else
 		on_test_failed $dir
 		echo "Expected Diff:"
