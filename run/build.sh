@@ -11,4 +11,3 @@ SOURCES=(
 )
 
 compose ${SOURCES[@]} > happy_new_year.sh
-chmod +x happy_new_year.sh
