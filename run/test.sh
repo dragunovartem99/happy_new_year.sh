@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source run/compose.sh
+source functions/compose.sh
 
 print_red_text() {
 	local text=$1

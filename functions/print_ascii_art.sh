@@ -1,11 +1,4 @@
-# Implementation
-
-update_copyright_year() {
-	local file=$1
-	sed -i -E "s/$OLD_COPYRIGHT/$NEW_COPYRIGHT/g" "$file"
-}
-
-print_success_message() {
+print_ascii_art() {
 cat << "EOF"
 .      *    *           *.       *   .                      *     .
                .   .                   __   *    .     * .     *
@@ -16,5 +9,4 @@ cat << "EOF"
       /    \   /    \          *   |       |  )),`   (   .  )     *
    *   `||` ..  `||`   . *.   ... ==========='`   ... '--`-` ... *    .
 EOF
-echo "Copyright years updated to $TODAY"
 }

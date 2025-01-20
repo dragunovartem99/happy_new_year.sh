@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Configuration
-
 TODAY=$(date +"%Y")
 REGEX="[0-9]{4}"
 
@@ -12,14 +10,15 @@ TARGETS=(
 	"."
 )
 
-# Implementation
+update_copyright() {
+	local old=$1
+	local new=$2
+	local file=$3
 
-update_copyright_year() {
-	local file=$1
-	sed -i -E "s/$OLD_COPYRIGHT/$NEW_COPYRIGHT/g" "$file"
+	sed -i -E "s/$old/$new/g" "$file"
 }
 
-print_success_message() {
+print_ascii_art() {
 cat << "EOF"
 .      *    *           *.       *   .                      *     .
                .   .                   __   *    .     * .     *
@@ -30,13 +29,11 @@ cat << "EOF"
       /    \   /    \          *   |       |  )),`   (   .  )     *
    *   `||` ..  `||`   . *.   ... ==========='`   ... '--`-` ... *    .
 EOF
-echo "Copyright years updated to $TODAY"
 }
 
-# Program Execution
-
 find "${TARGETS[@]}" -type f | while read -r file; do
-	update_copyright_year "$file"
+	update_copyright "$OLD_COPYRIGHT" "$NEW_COPYRIGHT" "$file"
 done
 
-print_success_message
+print_ascii_art
+echo "Copyright years updated to $TODAY"
