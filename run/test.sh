@@ -20,7 +20,6 @@ on_test_failed() {
 on_test_passed() {
 	local dir=$1
 	print_green_text "✓ Git diff matches the expected output in $dir"
-	git checkout $dir --quiet
 }
 
 for dir in tests/*/; do
@@ -28,6 +27,7 @@ for dir in tests/*/; do
 
 	actual_diff=$(git diff $dir)
 	expected_diff=$(cat "${dir}git.diff")
+	git checkout $dir --quiet
 
 	if [ "$actual_diff" == "$expected_diff" ]; then
 		on_test_passed $dir
