@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source generate_script.sh
+source run/generate_script.sh
 
 print_red_text() {
 	local text=$1
