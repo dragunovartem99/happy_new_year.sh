@@ -1,6 +1,6 @@
 # happy_new_year.sh
 
-![cover_image](https://github.com/user-attachments/assets/df27f6b5-6088-4171-93fd-71e5f4ab600d)
+![cover_image](https://github.com/user-attachments/assets/158984be-e577-49ec-8d70-362ad82b0bbe)
 
 Minimal bash utility to update copyright years in your git repositories
 
