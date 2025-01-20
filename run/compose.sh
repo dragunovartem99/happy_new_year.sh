@@ -1,9 +1,9 @@
 #!/bin/bash
 
-generate_script() {
+compose() {
 	local config="$1"
 
-	BUILDING_BLOCKS=(
+	COMPONENTS=(
 		$config
 		"src/implementation.sh"
 		"src/program_execution.sh"
@@ -11,8 +11,8 @@ generate_script() {
 
 	echo '#!/bin/bash'
 
-	for block in "${BUILDING_BLOCKS[@]}"; do
+	for component in "${COMPONENTS[@]}"; do
 		echo ""
-		cat "$block"
+		cat "$component"
 	done
 }

@@ -1,7 +1,7 @@
-diff --git a/playground/01-works-on-single-file/code.js b/playground/01-works-on-single-file/code.js
+diff --git a/tests/01-works-on-single-file/code.js b/tests/01-works-on-single-file/code.js
 index a492f16..bdf0c4d 100644
---- a/playground/01-works-on-single-file/code.js
-+++ b/playground/01-works-on-single-file/code.js
+--- a/tests/01-works-on-single-file/code.js
++++ b/tests/01-works-on-single-file/code.js
 @@ -1,5 +1,5 @@
  /*!
 - * Copyright (c) 1999-2012 Your Company Name. All rights reserved.

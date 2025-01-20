@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source run/generate_script.sh
+source run/compose.sh
 
 print_red_text() {
 	local text=$1
@@ -23,8 +23,8 @@ on_test_passed() {
 	git checkout $dir --quiet
 }
 
-for dir in playground/*/; do
-	generate_script "${dir}configuration.test.sh" | bash
+for dir in tests/*/; do
+	compose "${dir}configuration.test.sh" | bash
 
 	actual_diff=$(git diff $dir)
 	expected_diff=$(cat "${dir}git.diff")
