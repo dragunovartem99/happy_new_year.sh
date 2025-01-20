@@ -26,7 +26,7 @@ for dir in tests/*/; do
 	compose "${dir}configuration.test.sh" | bash
 
 	actual_diff=$(git diff $dir)
-	expected_diff=$(cat "${dir}git.diff")
+	expected_diff=$(cat "${dir}expected.diff")
 	git checkout $dir --quiet
 
 	if [ "$actual_diff" == "$expected_diff" ]; then
