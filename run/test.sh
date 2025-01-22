@@ -7,7 +7,7 @@ source functions/show_diff_mismatch.sh
 
 for dir in tests/*/; do
 	sources=(
-		"${dir}mock.sh"
+		"${dir}mock_config.sh"
 		"functions/update_copyright.sh"
 		"pieces/main_program.sh"
 	)
