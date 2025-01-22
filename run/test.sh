@@ -3,6 +3,7 @@
 source functions/compose.sh
 source functions/print_red_text.sh
 source functions/print_green_text.sh
+source functions/show_diff_mismatch.sh
 
 for dir in tests/*/; do
 	sources=(
@@ -21,10 +22,7 @@ for dir in tests/*/; do
 		print_green_text "✓ Git diff matches the expected output in $dir"
 		git checkout $dir --quiet
 	else
-		print_red_text "Git diff does not match the expected output in $dir"
-		echo "Expected Diff:"
-		echo "$expected_diff"
-		echo "Actual Diff:"
-		echo "$actual_diff"
+		print_red_text "✗ Git diff does not match the expected output in $dir"
+		show_diff_mismatch "$expected_diff" "$actual_diff"
 	fi
 done
